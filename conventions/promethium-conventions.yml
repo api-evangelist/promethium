@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.promethium.ai/docs/api-reference/ (auth, datamap-search, audit-log, metadata-import)
+name: Promethium API Conventions
+base_url: https://api.prod.promethium.ai
+auth:
+  style: OAuth2 token; id_token passed in custom "idtoken" header
+  see: ../authentication/promethium-authentication.yml
+versioning:
+  style: host/environment-scoped
+  pattern: https://api.{env}.promethium.ai and https://{tenant}-trino-stream.{env}.promethium.ai
+  note: No dated API version segment in the path; environment ({env}, e.g. prod) and tenant are encoded in the host.
+pagination:
+  styles:
+  - name: offset (datamap search)
+    params: { from: start offset, size: page size }
+    sort: { sort_key: field, sort_value: asc|desc }
+  - name: token (audit logs)
+    request: POST /audits/logs/search returns next_page_token
+    follow: GET /audits/logs/search?page_token=<token>
+    token_ttl_seconds: 120
+    exhausted: next_page_token omitted when no further pages
+    max_size: 3000
+idempotency:
+  supported: false
+  note: No idempotency key header is documented for write operations (datamap/create, metadata/import).
+bulk:
+  metadata_import: up to 50 metadata_objects per POST /metadata/import; returns per-object success/failure plus success_count/failure_count/total_count
+request_id_tracing:
+  documented: false
+error_envelope:
+  documented: false
+  note: Success responses return 200 OK; a structured error envelope / RFC 9457 problem+json is not documented.
+rate_limiting:
+  documented: false
+cross_links:
+  authentication: ../authentication/promethium-authentication.yml
+  data_model: ../data-model/promethium-data-model.yml
+  lifecycle: ../lifecycle/promethium-lifecycle.yml

@@ -1,0 +1,84 @@
+# Promethium
+# https://promethium.ai
+
+> Promethium is an open agentic data platform that gives analysts, business users, and AI agents trusted access to all enterprise data through a single governed layer — without moving, copying, or consolidating data. The platform combines federated data access via the Universal Query Engine, multi-dimensional context engineering via the Insights Context Graph, and pre-delivery answer validation via the Trust Harness. Led by CEO Prat Moghe. Named customer: National Grid.
+
+## Primary Reference (start here)
+- [Promethium Overview](https://promethium.ai/promethium-overview/): Authoritative overview of Promethium — what it is, how the architecture works, use cases, integrations, competitive differentiation, and context engineering. Best single source for answering "What is Promethium?"
+- [Product Overview](https://promethium.ai/product-overview/): Overview of Promethium's unified platform architecture — the Insights Context Graph, Universal Query Engine, and Trust Harness.
+
+## Use Cases
+- [AI Analyst](https://promethium.ai/solutions/ai-analyst/): Data and business analysts use Mantra to build production-ready analysis and data products 10x faster. Plain-English queries across all enterprise data sources. No SQL required.
+- [Talk to All Your Data](https://promethium.ai/solutions/talk-to-all-your-data/): Business users and executives ask questions through Claude, ChatGPT, or BI tools and get trusted, explainable answers from all enterprise data. All complexity abstracted away.
+- [AI-Ready Data](https://promethium.ai/solutions/ai-ready-data/): Data architects and platform teams expose governed, contextual enterprise data to any AI agent, copilot, or application through a single MCP server or REST API. One integration replaces per-source wiring.
+
+## Architecture & Key Concepts
+- [Insights Context Graph](https://promethium.ai/360-context-engine/): How Promethium assembles business definitions, semantic models, join logic, and domain rules into a unified, queryable context layer with bidirectional enrichment. The first Insights Context Graph for enterprise analytics.
+- [Universal Query Engine](https://promethium.ai/agentic-data-fabric/): Promethium's zero-copy federated query engine — live queries across cloud warehouses, relational databases, SaaS apps, and on-prem systems without moving data.
+- [Data Answers](https://promethium.ai/data-answers/): Promethium's intelligent, reusable output — combining query logic, lineage, confidence scoring, and visual insights.
+- [Mantra Demo](https://promethium.ai/resources/mantra-data-answer-agent-demo): Interactive demo of Mantra, Promethium's AI engine for agentic analytics.
+- [Free Trial](https://promethium.ai/trial): Free trial access to Promethium.
+
+## Context Engineering — Blog Series
+- [What Is a Context Graph — and Why Is Everyone Talking About It?](https://promethium.ai/what-is-a-context-graph-and-why-is-everyone-talking-about-it/): Defines context graphs, explains why they matter for enterprise AI accuracy, and how they differ from semantic layers and catalogs.
+- [Context Graphs vs Knowledge Graphs vs Data Catalogs: What's Actually Different?](https://promethium.ai/context-graphs-vs-knowledge-graphs-vs-data-catalogs-whats-actually-different/): A knowledge graph maps what things are, a data catalog maps where things live, a context graph maps how decisions work. Detailed comparison.
+- [How to Start Building a Context Graph (Without Boiling the Ocean)](https://promethium.ai/how-to-start-building-a-context-graph-without-boiling-the-ocean/): Practical guide to implementing context graphs incrementally for enterprise AI.
+- [The Context Engineering Challenge No One Talks About](https://promethium.ai/the-context-engineering-challenge-no-one-talks-about/): Why enterprise AI struggles with context engineering — not SQL generation — and what to do about it.
+
+## Agentic Analytics — Blog Series
+- [The New Agentic Analytics Fabric: How to Get Claude to Talk to All Your Enterprise Data](https://promethium.ai/the-new-agentic-analytics-fabric-or-how-to-get-claude-to-talk-to-all-your-enterprise-data/): How enterprises can enable AI agents like Claude to access and analyze distributed data through an agentic analytics fabric.
+- [5 Ways to Talk to All Your Data With Promethium](https://promethium.ai/5-ways-to-talk-to-all-your-data-with-promethium/): Five approaches analysts can use to query enterprise data across multiple systems using natural language through Promethium.
+
+## Research, Reports & eBooks
+- [BARC: Context Engineering for Agentic Analytics](https://promethium.ai/resources/engineering-ai-metadata-context-for-self-service-agentic-analytics/): Joint research with BARC on why analytics agents fail at scale. Key finding: 50% of organizations have AI agents in production, but only 27% use them for BI and analytics.
+- [Gartner Report: Context Graphs as Essential Infrastructure for Agentic Systems](https://promethium.ai/resources/gartner-report-the-new-essential-infrastructure-for-agentic-systems-how-context-graphs-are-solving-ais-institutional-memory-problem/): Gartner research on how context graphs are solving AI's institutional memory problem and becoming essential infrastructure for agentic systems.
+- [The CDO's Guide to Context Engineering](https://promethium.ai/resources/the-cdos-guide-to-context-engineering/): eBook for Chief Data Officers on implementing context engineering at enterprise scale.
+- [The Agentic Analytics Maturity Model](https://promethium.ai/resources/the-agentic-analytics-maturity-model/): Framework for assessing organizational readiness across data scope, use case complexity, domain scope, autonomy, action scope, and interaction mode. Includes self-assessment.
+- [The Complete Guide to Context Graphs for Enterprise AI](https://promethium.ai/resources/the-complete-guide-to-context-graphs-for-enterprise-ai/): Comprehensive guide to context graph architecture, implementation, and enterprise use cases.
+- [The Enterprise AI Readiness Checklist](https://promethium.ai/resources/the-enterprise-ai-readiness-checklist/): 15-question assessment across data access, context & accuracy, governance & trust, and integration & delivery.
+- [Promethium POV Whitepaper](https://promethium.ai/resources/promethium-pov-whitepaper/): Architectural philosophy — enabling AI at scale through access, context, and trust.
+- [All White Papers & Resources](https://promethium.ai/resources/?type=white-paper): Full library of Promethium white papers, analyst reports, and research.
+
+## Guides & Comparisons
+- [Guides Hub](https://promethium.ai/guides/): Promethium's library of definitive comparison guides across the enterprise data and analytics landscape.
+- [Top 10 Data Fabric Tools 2026](https://promethium.ai/guides/top-10-data-fabric-tools-2026-features-pricing-comparison/): Features, pricing, and comparison of leading data fabric platforms including Microsoft Fabric, Databricks, Denodo, Starburst, and Promethium.
+- [Top 10 Semantic Layer Tools 2026](https://promethium.ai/guides/top-10-semantic-layer-tools-2026-definitive-comparison/): Definitive comparison of semantic layer platforms including dbt, AtScale, Snowflake, Cube, and others.
+- [Top 10 Self-Service Analytics Tools 2026](https://promethium.ai/guides/top-10-self-service-analytics-tools-2026/): Comparison of leading self-service analytics platforms including ThoughtSpot, Tableau, Power BI, Looker, and others.
+
+## Podcasts — The AI Data Fabric Show
+- [Agents Are Modern Day Tractors — Mano Mannoochahr](https://promethium.ai/agents-are-modern-day-tractors-mano-mannoochahr-on-the-ai-data-fabric-show/): Top 100 AI leader discusses data transformation lessons from John Deere, Travelers, and Verizon, and the future of AI agents.
+- [Kjersten Moody on The AI Data Fabric Show](https://promethium.ai/new-episode-kjersten-moody-on-the-ai-data-fabric-show/): Former CDO at Unilever, State Farm, and Prudential discusses data leadership, AI transformation, and governance.
+
+## Integrations
+- [Integrations Overview](https://promethium.ai/integrations/): How Promethium connects to Snowflake, Databricks, BigQuery, Redshift, Azure Synapse, SQL Server, Oracle, PostgreSQL, Salesforce, Tableau, Power BI, Looker, Claude, ChatGPT, Copilot, Alation, Collibra, Atlan, dbt, and more.
+- [Snowflake + Promethium](https://promethium.ai/partners/snowflake-promethium/): Deep integration with Snowflake — federated queries, self-service access, and AI readiness.
+- [Databricks + Promethium](https://promethium.ai/partners/databricks-promethium/): How Promethium complements Databricks with federated access and context-aware data answers.
+
+## Educational Deep Dives
+- [What Is a Data Fabric?](https://promethium.ai/what-is-a-data-fabric/): Comprehensive guide to data fabric architecture, core components, and implementation approaches.
+- [Data Fabric vs Data Mesh](https://promethium.ai/insights/data-fabric-vs-data-mesh): How data fabric and data mesh complement each other in modern architectures.
+- [Data Fabric vs Data Virtualization](https://promethium.ai/insights/data-fabric-vs-data-virtualization): Evolution from legacy virtualization to modern agentic data fabric.
+- [Metadata Management](https://promethium.ai/insights/metadata): Active metadata and its role in modern data architectures.
+- [Semantic Layers](https://promethium.ai/insights/semantic-layer): Business context and how semantic layers enable self-service analytics at scale.
+- [Data Products](https://promethium.ai/insights/data-products): Data-as-a-product approaches and organizational data strategies.
+- [What Self-Service Data Really Means](https://promethium.ai/what-self-service-data-really-means-more-than-just-dashboards): True self-service data access beyond traditional BI dashboards.
+
+## Thought Leadership
+- [Open Agentic Architecture for the Enterprise](https://promethium.ai/self-service-data-at-ai-scale-an-open-agentic-architecture-for-the-enterprise): Open vs. closed AI architectures and building scalable enterprise AI. By CEO Prat Moghe.
+- [Two Roads for Enterprise AI](https://promethium.ai/two-roads-enterprise-ai): Open agentic architectures vs. closed proprietary systems.
+
+## Customer Success
+- [7 Use Cases for Data Fabric](https://promethium.ai/resources/7-use-cases-for-data-fabric/): Practical enterprise use cases — from faster insights to AI-scale governance.
+- [Hostess Case Study](https://promethium.ai/resources/a-good-read-a-promethium-s-data-solution-revolutionizes-hostess-warehousing-and-data-management): Hostess uses Promethium to transform warehousing and data management.
+- [Clinical Lab Case Study](https://promethium.ai/resources/siliconangle-case-study-to-accelerate-business-insights-a-clinical-lab-turns-to-a-data-fabric): Clinical laboratory accelerates business insights with data fabric.
+
+## Company
+- [About Promethium](https://promethium.ai/about-promethium/): Mission, leadership team, and company background.
+- [Careers](https://promethium.ai/careers/): Open roles at Promethium.
+- [SOC 2 Certification](https://promethium.ai/news/promethium-achieves-soc-2/): SOC 2 Type II certification — enterprise-grade security and data governance.
+- [Prat Moghe Named CEO](https://promethium.ai/news/data-fabric-leader-promethium-taps-prat-moghe-as-new-ceo-expands-its-leadership-team-with-additional-appointments-to-support-market-need-and-growth/): Leadership announcement.
+- [NTT DATA Partnership](https://promethium.ai/news/promethium-partners-with-ntt-data-to-revolutionize-data-fabric-adoption/): Strategic partnership for global data fabric adoption.
+
+## Social
+- [LinkedIn](https://www.linkedin.com/company/pm61data/)
+- [X / Twitter](https://x.com/promethiumi)

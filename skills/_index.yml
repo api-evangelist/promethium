@@ -1,0 +1,14 @@
+generated: '2026-07-20'
+method: generated
+source: https://docs.promethium.ai/docs/api-reference/
+name: Promethium Agent Skills
+api: Promethium API
+skills:
+- name: promethium-search-and-query
+  file: promethium-search-and-query.md
+  description: Find a governed datamap and run a federated SQL query via the Universal Query Engine.
+  operations: ['POST /datamap/search', 'GET /datamap/{id}', 'POST /query']
+- name: promethium-catalog-data-asset
+  file: promethium-catalog-data-asset.md
+  description: Create a datamap from SQL and bulk-enrich metadata across tables, views, and datamaps.
+  operations: ['POST /datamap/create', 'POST /metadata/import', 'POST /audits/logs/search']

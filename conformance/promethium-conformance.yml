@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: derived
+source: derived from https://docs.promethium.ai/docs/api-reference/ documented behavior
+name: Promethium API Conformance
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    Token-based OAuth2 authentication with /auth/login, /auth/refresh, /auth/logout,
+    returning access_token / refresh_token (docs/api-reference/api-auth).
+- id: oidc
+  conforms: partial
+  evidence: >-
+    SSO login returns an id_token used for API calls, consistent with OpenID Connect,
+    but no published /.well-known/openid-configuration (probed 404).
+- id: rfc9457
+  conforms: false
+  evidence: No application/problem+json error envelope documented; errors not specified beyond 200 OK.
+- id: pagination
+  conforms: true
+  evidence: >-
+    Offset pagination (from/size) on datamap search and opaque token pagination
+    (next_page_token, 120s TTL) on audit logs.
+- id: idempotency
+  conforms: false
+  evidence: No idempotency-key header documented for POST create/import operations.
+- id: trino
+  conforms: true
+  evidence: >-
+    Trino Stream query interface (POST /query) executes SQL against the federated
+    Trino engine with Basic / JWT / Bearer auth (docs/api-reference/api-trino-stream-*).
+- id: mcp
+  conforms: claimed
+  evidence: >-
+    Marketing/product pages state a native Model Context Protocol server ("single MCP
+    server or REST API"), but no public MCP endpoint URL or tool manifest is documented.

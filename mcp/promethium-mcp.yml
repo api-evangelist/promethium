@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  Product pages (promethium.ai/open-agentic-platform, /solutions/ai-ready-data,
+  llms.txt) advertise a native MCP server; tool list derived from documented REST
+  operations at docs.promethium.ai/docs/api-reference/. No public MCP endpoint URL
+  or manifest is published.
+status: candidate
+name: Promethium MCP Server
+vendor_claim: >-
+  "expose governed, contextual enterprise data to any AI agent, copilot, or
+  application through a single MCP server or REST API" — native MCP interface with
+  built-in governance and lineage.
+endpoint: null   # no public MCP server URL documented
+auth: OAuth2 idtoken (see ../authentication/promethium-authentication.yml)
+candidate_tools:
+- name: search_datamaps
+  from_operation: POST /datamap/search
+  description: Full-text / faceted search across governed datamaps.
+- name: get_datamap
+  from_operation: GET /datamap/{id}
+  description: Retrieve a single datamap and its field definitions.
+- name: create_datamap
+  from_operation: POST /datamap/create
+  description: Create a datamap from an SQL definition.
+- name: import_metadata
+  from_operation: POST /metadata/import
+  description: Bulk import/update metadata for tables, views, and datamaps.
+- name: search_audit_logs
+  from_operation: POST /audits/logs/search
+  description: Query user activity audit logs with date and user filters.
+- name: run_query
+  from_operation: POST /query (Trino Stream)
+  description: Execute a federated SQL query via the Universal Query Engine (Trino).
+notes:
+- These tools are CANDIDATES derived from the documented REST surface, not a captured MCP manifest.

@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  https://docs.promethium.ai/docs/api-reference/ + live probes (status.promethium.ai,
+  docs.promethium.ai/docs/changelog)
+name: Promethium API Lifecycle
+versioning:
+  style: environment/host-scoped (no dated path version)
+  hosts:
+  - https://api.{env}.promethium.ai
+  - https://{tenant}-trino-stream.{env}.promethium.ai
+deprecation:
+  policy_published: false
+  sunset_header: not documented (RFC 8594 Sunset/Deprecation headers not observed in docs)
+status_page:
+  url: null
+  note: status.promethium.ai did not resolve (probe returned no response); no public status page found.
+changelog:
+  url: null
+  note: docs.promethium.ai/docs/changelog returned 404; no public dated changelog found.
+sla:
+  published: false
+notes:
+- Absence of a public status page, changelog, and deprecation policy is recorded as
+  observed data, not inferred.

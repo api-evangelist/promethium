@@ -1,0 +1,51 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.promethium.ai/docs/api-reference/api-auth + api-trino-stream-auth
+name: Promethium API Authentication
+base_url: https://api.prod.promethium.ai
+docs: https://docs.promethium.ai/docs/api-reference/api-auth
+summary: >-
+  Promethium uses tenant-scoped OAuth2 token authentication. Interactive SSO users
+  authenticate via a browser redirect flow; local service accounts exchange
+  email/password credentials for tokens. The returned id_token is passed on every
+  subsequent request in a custom "idtoken" header (not a standard Bearer header).
+  The Trino Stream query surface additionally accepts HTTP Basic and OAuth2 Bearer.
+schemes:
+- id: oauth2-sso
+  type: oauth2
+  flow: browser-redirect (SSO / OIDC provider)
+  login: GET /auth/login/{tenant}
+  description: >-
+    Interactive browser-based authentication. Redirects to the tenant's configured
+    SSO provider and returns id_token, access_token, and refresh_token.
+- id: oauth2-service-account
+  type: oauth2
+  flow: password (resource owner credentials)
+  login: POST /auth/login/{tenant}
+  content_type: application/json
+  body: '{ "email": "<email>", "password": "<password>" }'
+  returns: [id_token, access_token, refresh_token]
+  description: Direct credential exchange for local service accounts.
+- id: idtoken-header
+  type: apiKey
+  in: header
+  name: idtoken
+  description: >-
+    The id_token obtained from /auth/login must be sent in the "idtoken" header on
+    all subsequent API calls (custom header, not RFC 6750 Bearer).
+- id: trino-basic
+  type: http
+  scheme: basic
+  applies_to: Trino Stream query endpoint
+  header: 'Authorization: Basic <base64>'
+- id: trino-bearer
+  type: http
+  scheme: bearer
+  applies_to: Trino Stream query endpoint
+  header: 'Authorization: Bearer <token>'
+token_lifecycle:
+  refresh: 'POST /auth/refresh/{tenant} (body: refresh_token)'
+  logout: 'GET /auth/logout/{tenant}'
+notes:
+- Authentication and all hosts are tenant-scoped ({tenant}) and environment-scoped ({env}, e.g. prod).
+- No public OAuth scopes are documented; authorization is enforced via roles/domains (see docs/authorization).

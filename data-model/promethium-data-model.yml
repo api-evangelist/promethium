@@ -1,0 +1,55 @@
+generated: '2026-07-20'
+method: derived
+source: derived from https://docs.promethium.ai/docs/api-reference/ request/response fields
+name: Promethium Data Model
+entities:
+- name: Datamap
+  description: >-
+    A metadata object representing a governed data asset, defined by an SQL query.
+    Core cataloging/governance construct in Promethium.
+  key_fields: [id, datamap_name, source_name, sql, state, priority, tags, owner,
+    sme, requestor, created_ts, updated_ts, field_count, average_rating, query_count, view_count]
+  create: POST /datamap/create
+  read: GET /datamap/{id}
+  search: POST /datamap/search
+- name: DatamapField
+  description: Field/column definition belonging to a Datamap.
+  key_fields: [name, description, tags]
+- name: MetadataObject
+  description: >-
+    Importable metadata record for a TABLE, VIEW, or DATAMAP; carries descriptions,
+    tags, and domains at object and field level.
+  key_fields: [id, type, display_name, description, tags, domains, fields, fact_id]
+  write: POST /metadata/import (bulk, up to 50 per call)
+- name: AuditLog
+  description: Record of user activity (timestamp, user, action, target, metadata).
+  key_fields: [timestamp, user, action, target, metadata]
+  search: POST /audits/logs/search
+- name: Domain
+  description: Governance grouping applied to metadata objects (see docs/authorization/domains).
+- name: Role
+  description: Authorization role governing data and UI access (see docs/authorization/roles).
+relationships:
+- from: Datamap
+  to: DatamapField
+  type: has_many
+  via: datamap_fields
+- from: MetadataObject
+  to: DatamapField
+  type: has_many
+  via: fields
+- from: MetadataObject
+  to: Domain
+  type: has_many
+  via: domains
+- from: Datamap
+  to: Domain
+  type: has_many
+  via: domains
+- from: AuditLog
+  to: MetadataObject
+  type: belongs_to
+  via: target
+notes:
+- MetadataObject.type enumerates TABLE, VIEW, DATAMAP.
+- Object id-prefix / domain conventions are not published in the object reference.

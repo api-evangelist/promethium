@@ -1,8 +1,15 @@
 aid: promethium
 name: Promethium
-description: Promethium is a company surfaced as a portfolio company of insight-partners and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Promethium is an open agentic data platform that gives analysts, business users, and AI
+  agents trusted access to all enterprise data through a single governed layer without moving,
+  copying, or consolidating data. Its AI Insights Fabric combines a zero-copy federated
+  Universal Query Engine (Trino) across cloud warehouses, relational databases, SaaS apps and
+  on-prem systems, an Insights Context Graph that assembles business definitions and semantic
+  models, and a Trust Harness that validates answers before delivery. Promethium exposes
+  governed data to any agent, copilot, or application through a single MCP server or REST API,
+  with its Mantra engine powering plain-English agentic analytics. Backed by Insight Partners;
+  led by CEO Prat Moghe.
 url: https://raw.githubusercontent.com/api-evangelist/promethium/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +17,60 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://promethium.ai/wp-content/themes/promethium/assets/images/src/favicon.png
 tags:
 - Company
-apis: []
+- Data Fabric
+- Agentic Analytics
+- Semantic Layer
+- Enterprise Data
+- Model Context Protocol
+- Federated Query
+- Data Governance
+apis:
+- name: Promethium API
+  description: >-
+    REST API for Promethium's agentic data platform — tenant-scoped OAuth2 authentication,
+    datamap search and creation, bulk metadata import, audit logs, and federated SQL execution
+    via the Trino Stream Universal Query Engine.
+  humanURL: https://docs.promethium.ai/docs/api-intro
+  baseURL: https://api.prod.promethium.ai
+  tags:
+  - Data Fabric
+  - Federated Query
+  - Metadata
+  properties:
+  - type: Documentation
+    url: https://docs.promethium.ai/docs/api-intro
+  - type: Authentication
+    url: authentication/promethium-authentication.yml
+  - type: Conventions
+    url: conventions/promethium-conventions.yml
+  - type: Idempotency
+    url: conventions/promethium-conventions.yml
+  - type: Conformance
+    url: conformance/promethium-conformance.yml
+  - type: DataModel
+    url: data-model/promethium-data-model.yml
+  - type: MCPServer
+    url: mcp/promethium-mcp.yml
+  - type: AgentSkill
+    url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,4 +78,43 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.pm61data.com/
+  url: https://promethium.ai/
+- type: DeveloperPortal
+  url: https://docs.promethium.ai/
+- type: Documentation
+  url: https://docs.promethium.ai/docs/getting-started
+- type: APIReference
+  url: https://docs.promethium.ai/docs/api-intro
+- type: GettingStarted
+  url: https://docs.promethium.ai/docs/getting-started
+- type: Blog
+  url: https://promethium.ai/blog/
+- type: Pricing
+  url: https://promethium.ai/pricing/
+- type: SignUp
+  url: https://promethium.ai/trial
+- type: Support
+  url: https://promethium.ai/contact/
+- type: TermsOfService
+  url: https://promethium.ai/terms-of-service/
+- type: PrivacyPolicy
+  url: https://promethium.ai/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/promethium-ai
+- type: LLMsTxt
+  url: llms/promethium-llms.txt
+- type: Authentication
+  url: authentication/promethium-authentication.yml
+- type: DomainSecurity
+  url: security/promethium-domain-security.yml
+- type: WellKnown
+  url: well-known/promethium-well-known.yml
+- type: Lifecycle
+  url: lifecycle/promethium-lifecycle.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
