@@ -1,17 +1,13 @@
 generated: '2026-07-20'
 method: derived
-source: >-
-  Product pages (promethium.ai/open-agentic-platform, /solutions/ai-ready-data,
-  llms.txt) advertise a native MCP server; tool list derived from documented REST
-  operations at docs.promethium.ai/docs/api-reference/. No public MCP endpoint URL
-  or manifest is published.
+source: Product pages (promethium.ai/open-agentic-platform, /solutions/ai-ready-data, llms.txt) advertise
+  a native MCP server; tool list derived from documented REST operations at docs.promethium.ai/docs/api-reference/.
+  No public MCP endpoint URL or manifest is published.
 status: candidate
 name: Promethium MCP Server
-vendor_claim: >-
-  "expose governed, contextual enterprise data to any AI agent, copilot, or
-  application through a single MCP server or REST API" — native MCP interface with
-  built-in governance and lineage.
-endpoint: null   # no public MCP server URL documented
+vendor_claim: '"expose governed, contextual enterprise data to any AI agent, copilot, or application through
+  a single MCP server or REST API" — native MCP interface with built-in governance and lineage.'
+endpoint: null
 auth: OAuth2 idtoken (see ../authentication/promethium-authentication.yml)
 candidate_tools:
 - name: search_datamaps
@@ -34,3 +30,8 @@ candidate_tools:
   description: Execute a federated SQL query via the Universal Query Engine (Trino).
 notes:
 - These tools are CANDIDATES derived from the documented REST surface, not a captured MCP manifest.
+deployment:
+  mode: none
+  verified: derived
+  checked: '2026-08-12'
+  source: catalog MCP census
