@@ -2,11 +2,18 @@
   "repo": "promethium",
   "feeds": [
     {
-      "source": "https://docs.promethium.ai/docs/getting-started",
-      "feed_url": "https://docs.promethium.ai/blog/rss.xml",
+      "source": "https://promethium.ai/blog/",
+      "feed_url": "https://promethium.ai/blog/feed/",
       "title": "",
       "saved": 0,
       "method": "discovered"
+    },
+    {
+      "source": "https://promethium.ai/feed/",
+      "feed_url": "https://promethium.ai/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://docs.promethium.ai/blog/rss.xml",
@@ -17,7 +24,7 @@
     }
   ],
   "post_count": 4,
-  "fetched": "2026-10-03T12:30:02Z",
+  "fetched": "2026-10-10T13:15:00Z",
   "feed_nature": "vendor-blog",
   "feed_nature_basis": "path_blog",
   "feed_nature_note": "Whether these posts are the vendor publishing or its support community, decided on the URL path grammar of the saved posts -- not the hostname, which carries both on Khoros, and not author diversity, which flags large vendor blogs as forums. 'undetermined' means undetermined."
